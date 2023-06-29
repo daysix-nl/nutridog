@@ -1,0 +1,24 @@
+.wpc-custom-selected-terms ul.wpc-filter-chips-list {
+    display: flex;
+    overflow-x: auto;
+    padding-left: 0;
+    justify-content: flex-end;
+
+    li .wpc-filter-chip-name {
+        font-size: 10px;
+        color: #797979;
+    }
+
+}
+
+.wpc-inner-widget-chips-wrapper,
+.wpc-posts-found {
+    display: none !important;
+}
+
+.wpc-horizontal-layout .wpc-filters-section:not(.wpc-filter-layout-submit-button),
+.wpc-horizontal-layout.wpc-horizontal-cols-3 .wpc-filters-section:not(.wpc-filter-layout-submit-button) {
+    max-width: 100% !important;
+    width: 100% !important;
+    margin-right: 2%;
+}

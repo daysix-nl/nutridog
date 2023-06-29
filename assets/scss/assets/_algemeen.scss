@@ -1,0 +1,61 @@
+.xxl {
+
+    main {
+        margin-top: 112px;
+    }
+
+    * {
+        font-family: 'Hind', sans-serif;
+    }
+
+    .font-titel {
+        font-family: 'Montserrat', sans-serif !important;
+
+    }
+
+    background: #fff !important;
+}
+
+.shadow-block {
+    box-shadow: 0px 0px 30px -5px rgb(0 0 0 / 6%) !important;
+}
+
+.aws-search-result ul {
+    box-shadow: 0px 0px 30px -5px rgb(0 0 0 / 20%) !important;
+}
+
+// .aws-container {
+//     box-shadow: 0px 0px 30px -5px rgb(0 0 0 / 15%) !important;
+//     border-radius: 50px;
+// }
+
+.woocommerce img,
+.woocommerce-page img {
+    height: 100%;
+    max-width: auto;
+}
+
+.contentfield {
+    display: grid;
+    align-items: start;
+
+    p {
+        margin-bottom: 12px;
+    }
+}
+
+
+.price del {
+    color: #000;
+    font-weight: 400;
+    font-size: 80%;
+    margin-right: 5px;
+}
+
+.price ins {
+    text-decoration: none;
+}
+
+.woocommerce-product-details__short-description {
+    color: #797979;
+}
