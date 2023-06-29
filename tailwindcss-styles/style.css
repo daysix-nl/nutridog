@@ -748,8 +748,8 @@ video {
 .h-\[60vh\] {
   height: 60vh;
 }
-.h-\[calc\(70vh-98px\)\] {
-  height: calc(70vh - 98px);
+.h-\[calc\(85vh-98px\)\] {
+  height: calc(85vh - 98px);
 }
 .h-auto {
   height: auto;
@@ -759,12 +759,6 @@ video {
 }
 .h-screen {
   height: 100vh;
-}
-.h-\[calc\(80vh-98px\)\] {
-  height: calc(80vh - 98px);
-}
-.h-\[calc\(85vh-98px\)\] {
-  height: calc(85vh - 98px);
 }
 .w-2 {
   width: 20px;
