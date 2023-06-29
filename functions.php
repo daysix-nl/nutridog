@@ -189,19 +189,19 @@ function register_acf_blocks() {
 | Get all blocks name from the folder name
 |--------------------------------------------------------------------------
 */
-// function get_blocks() {
-// 	$theme   = wp_get_theme();
-// 	$blocks  = get_option( 'cwp_blocks' );
-// 	$version = get_option( 'cwp_blocks_version' );
-// 	if ( empty( $blocks ) || version_compare( $theme->get( 'Version' ), $version ) || ( function_exists( 'wp_get_environment_type' ) && 'production' !== wp_get_environment_type() ) ) {
-// 		$blocks = scandir( get_template_directory() . '/blocks/' );
-// 		$blocks = array_values( array_diff( $blocks, array( '..', '.', '.DS_Store', '_base-block' ) ) );
+function get_blocks() {
+	$theme   = wp_get_theme();
+	$blocks  = get_option( 'cwp_blocks' );
+	$version = get_option( 'cwp_blocks_version' );
+	if ( empty( $blocks ) || version_compare( $theme->get( 'Version' ), $version ) || ( function_exists( 'wp_get_environment_type' ) && 'production' !== wp_get_environment_type() ) ) {
+		$blocks = scandir( get_template_directory() . '/blocks/' );
+		$blocks = array_values( array_diff( $blocks, array( '..', '.', '.DS_Store', '_base-block' ) ) );
 
-// 		update_option( 'cwp_blocks', $blocks );
-// 		update_option( 'cwp_blocks_version', $theme->get( 'Version' ) );
-// 	}
-// 	return $blocks;
-// }
+		update_option( 'cwp_blocks', $blocks );
+		update_option( 'cwp_blocks_version', $theme->get( 'Version' ) );
+	}
+	return $blocks;
+}
 
 
 
@@ -533,11 +533,11 @@ register_sidebar( array(
   'after_title' => '</p>',
 ) );
  
-// Disables the block editor from managing widgets in the Gutenberg plugin.
-add_filter( 'gutenberg_use_widgets_block_editor', '__return_false', 100 );
+// // Disables the block editor from managing widgets in the Gutenberg plugin.
+// add_filter( 'gutenberg_use_widgets_block_editor', '__return_false', 100 );
  
-// Disables the block editor from managing widgets. renamed from wp_use_widgets_block_editor
-add_filter( 'use_widgets_block_editor', '__return_false' );
+// // Disables the block editor from managing widgets. renamed from wp_use_widgets_block_editor
+// add_filter( 'use_widgets_block_editor', '__return_false' );
 
 
 
