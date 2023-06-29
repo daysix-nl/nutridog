@@ -92,7 +92,7 @@ if ( post_password_required() ) {
                     
 
                     <div class="md:col-span-2 grid md:mt-6 gap-y-4 gap-x-2.5 md:mr-4 items-start">
-                        <div class="contentfield text-grijs">
+                        <div class="contentfield text-grijs items-start">
                             <h2 class="text-28 leading-28 mb-1 text-black font-titel">Product informatie</h2>
                             <?php the_content();?>
                         </div>
