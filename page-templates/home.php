@@ -7,8 +7,6 @@
  get_header(); ?>
  
 
-
-
 <div class="bg-geel flex items-center w-screen h-[calc(70vh-98px)] md:h-[calc(100vh-112px)] relative overflow-hidden bg-cover bg-center" style="background-image: url('');">
     <video class="w-full h-full object-cover absolute top-0 right-0" autoplay="" loop="" muted="" playsinline="">
         <source src="/wp-content/themes/dogcarexxl-theme/img/local/test3.mp4">
