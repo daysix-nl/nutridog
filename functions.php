@@ -89,64 +89,64 @@ add_action( 'after_setup_theme', 'day_six_config', 0 );
 | Categorie
 |--------------------------------------------------------------------------
 */
-// add_filter('block_categories_all', function ($categories) {
+add_filter('block_categories_all', function ($categories) {
 
-//     array_unshift($categories,           
-//     [
-//         'slug'  => 'styling',
-//         'title' => 'styling',
-//         'icon'  => null
-//     ],  
-//     [
-//         'slug'  => 'hero',
-//         'title' => 'hero',
-//         'icon'  => null
-//     ],
-//     [
-//         'slug'  => 'tussenkoppen',
-//         'title' => 'Tussenkoppen',
-//         'icon'  => null
-//     ],
-//     [
-//         'slug'  => 'blokken',
-//         'title' => 'blokken',
-//         'icon'  => null
-//     ],
-//     [
-//         'slug'  => 'woocommerce',
-//         'title' => 'woocommerce',
-//         'icon'  => null
-//     ],
+    array_unshift($categories,           
+    [
+        'slug'  => 'styling',
+        'title' => 'styling',
+        'icon'  => null
+    ],  
+    [
+        'slug'  => 'hero',
+        'title' => 'hero',
+        'icon'  => null
+    ],
+    [
+        'slug'  => 'tussenkoppen',
+        'title' => 'Tussenkoppen',
+        'icon'  => null
+    ],
+    [
+        'slug'  => 'blokken',
+        'title' => 'blokken',
+        'icon'  => null
+    ],
+    [
+        'slug'  => 'woocommerce',
+        'title' => 'woocommerce',
+        'icon'  => null
+    ],
 
-//     [
-//         'slug'  => 'cards',
-//         'title' => 'cards',
-//         'icon'  => null
-//     ],
-//     [
-//         'slug'  => 'navigatie',
-//         'title' => 'navigatie',
-//         'icon'  => null
-//     ],
-//     [
-//         'slug'  => 'innerblocks',
-//         'title' => 'inner blocks',
-//         'icon'  => null
-//     ],
-//     [
-//         'slug'  => 'elements',
-//         'title' => 'elements',
-//         'icon'  => null
-//     ],
-//     [
-//         'slug'  => 'page',
-//         'title' => 'page',
-//         'icon'  => null
-//     ],
-// );
+    [
+        'slug'  => 'cards',
+        'title' => 'cards',
+        'icon'  => null
+    ],
+    [
+        'slug'  => 'navigatie',
+        'title' => 'navigatie',
+        'icon'  => null
+    ],
+    [
+        'slug'  => 'innerblocks',
+        'title' => 'inner blocks',
+        'icon'  => null
+    ],
+    [
+        'slug'  => 'elements',
+        'title' => 'elements',
+        'icon'  => null
+    ],
+    [
+        'slug'  => 'page',
+        'title' => 'page',
+        'icon'  => null
+    ],
+);
 
-// return $categories;
-// }, 10, 1);
+return $categories;
+}, 10, 1);
 
 
 /*
@@ -154,20 +154,20 @@ add_action( 'after_setup_theme', 'day_six_config', 0 );
 | All allowed blocks
 |--------------------------------------------------------------------------
 */
-// add_filter('allowed_block_types_all', function($allowed_blocks, $editor_context) {
-//     $blocks = get_blocks();
-//     $acf_blocks = []; 
-//     foreach ($blocks as $block) { 
-//         $acf_blocks[] = 'acf/' . $block;
-//     }
+add_filter('allowed_block_types_all', function($allowed_blocks, $editor_context) {
+    $blocks = get_blocks();
+    $acf_blocks = []; 
+    foreach ($blocks as $block) { 
+        $acf_blocks[] = 'acf/' . $block;
+    }
 
-//     $core_blocks = [
-//         // 'core/paragraph',
-//         // 'core/heading',
-//     ];
+    $core_blocks = [
+        // 'core/paragraph',
+        // 'core/heading',
+    ];
 
-//     return array_merge($acf_blocks, $core_blocks);
-// }, 10, 2);
+    return array_merge($acf_blocks, $core_blocks);
+}, 10, 2);
 
 
 /*
@@ -175,14 +175,14 @@ add_action( 'after_setup_theme', 'day_six_config', 0 );
 | Register blocks
 |--------------------------------------------------------------------------
 */
-// add_action( 'init', 'register_acf_blocks', 5 );
-// function register_acf_blocks() {
+add_action( 'init', 'register_acf_blocks', 5 );
+function register_acf_blocks() {
 
-//     $blocks = get_blocks();
-//     foreach ($blocks as $block) {
-//             register_block_type( __DIR__ . '/blocks/'.$block );
-//     }
-// }
+    $blocks = get_blocks();
+    foreach ($blocks as $block) {
+            register_block_type( __DIR__ . '/blocks/'.$block );
+    }
+}
 
 /*
 |--------------------------------------------------------------------------
@@ -210,14 +210,14 @@ add_action( 'after_setup_theme', 'day_six_config', 0 );
 | Script for one block
 |--------------------------------------------------------------------------
 */
-// function cwp_register_block_script() {
-//     $blocks = get_blocks();
-//     foreach ($blocks as $block) {
-//         wp_register_script( $block, get_template_directory_uri() . '/blocks/'.$block.'/script.js' );
-//     }
+function cwp_register_block_script() {
+    $blocks = get_blocks();
+    foreach ($blocks as $block) {
+        wp_register_script( $block, get_template_directory_uri() . '/blocks/'.$block.'/script.js' );
+    }
 
-// }
-// add_action( 'init', 'cwp_register_block_script' );
+}
+add_action( 'init', 'cwp_register_block_script' );
 /*
 |--------------------------------------------------------------------------
 | ACF json files
