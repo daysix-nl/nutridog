@@ -38,7 +38,7 @@
         <div class="card-container col-span-4 md:col-span-3 grid grid-cols-1 gap-3 relative h-auto">
             <div class="col-span-1">
 
-                <?php
+                <!-- <?php
                 if( have_rows('cpt_categorien', 'option') ): ?>
                     <?php while( have_rows('cpt_categorien', 'option') ): the_row(); ?>
                         <?php if( get_row_layout() == 'cpt_categorien_repeater'): ?>
@@ -56,7 +56,7 @@
                                     ?>
                         <?php endif; ?>
                     <?php endwhile; ?>
-                <?php endif; ?>
+                <?php endif; ?> -->
 
             </div>
             <div class="col-span-1 grid grid-cols-2 md:grid-cols-3 gap-2 md:gap-3">                          
@@ -155,7 +155,7 @@
                 </div>  
                 <div class="col-span-1">
                      <div class="">
-                         <?php
+                         <!-- <?php
                         if( have_rows('cpt_categorien', 'option') ): ?>
                             <?php while( have_rows('cpt_categorien', 'option') ): the_row(); ?>
                                 <?php if( get_row_layout() == 'cpt_categorien_repeater'): ?>
@@ -173,7 +173,7 @@
                                             ?>
                                 <?php endif; ?>
                             <?php endwhile; ?>
-                        <?php endif; ?>
+                        <?php endif; ?> -->
              
                     </div>
                 </div>
