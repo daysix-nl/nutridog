@@ -96,7 +96,9 @@
                             </div>
                              <div class="absolute bottom-0 left-0 right-0">
                                 <div class="px-[15px] md:px-3 pb-3">
-                                    <p class="text-20 leading-20 pt-4 text-roze font-titel font-black price"><?php if ( $price_html = $product->get_price_html() ) : ?><?php echo $price_html; ?><?php endif; ?></p>
+                                    <p class="text-20 leading-20 pt-4 text-roze font-titel font-black price"><?php if ( $price_html = $product->get_price_html() ) : ?>
+    <p class="text-20 leading-20 pt-4 text-roze font-titel font-black price"><?php echo $price_html; ?></p>
+<?php endif; ?></p>
                                 </div>
                                 <?php
                                 // Controleer of het product een simple product is
