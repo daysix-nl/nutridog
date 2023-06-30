@@ -63,7 +63,7 @@
                 <?php
                     $args = array(
                         'post_type' => 'product',
-                        'posts_per_page' => -0,
+                        'posts_per_page' => -1,
 
                         );
                     $loop = new WP_Query( $args );
