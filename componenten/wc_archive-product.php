@@ -217,3 +217,6 @@
   });
 } catch (error) {}
 </script> -->
+
+
+<?php get_footer(); ?>
