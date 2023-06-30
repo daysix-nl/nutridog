@@ -760,6 +760,9 @@ video {
 .h-screen {
   height: 100vh;
 }
+.h-\[calc\(85vh-98px\)\] {
+  height: calc(85vh - 98px);
+}
 .w-2 {
   width: 20px;
 }
