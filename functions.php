@@ -201,6 +201,21 @@ if( function_exists('acf_add_options_page') ) {
 }
 
 
+/**
+ * Register the Bulk Inventory API endpoint.
+ */
+function register_bulk_inventory_endpoint() {
+    register_rest_route(
+        'wc/v3', // De prefix voor de route
+        '/bulk-inventory', // De rest van het routeadres
+        array(
+            'methods' => 'POST',
+            'callback' => 'handle_bulk_inventory_request',
+            'permission_callback' => '__return_true', // Toestemming voor alle gebruikers
+        )
+    );
+}
+add_action( 'rest_api_init', 'register_bulk_inventory_endpoint' );
 
 
  
