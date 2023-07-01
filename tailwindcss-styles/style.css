@@ -760,6 +760,9 @@ video {
 .h-3 {
   height: 30px;
 }
+.h-5 {
+  height: 50px;
+}
 .w-2 {
   width: 20px;
 }
