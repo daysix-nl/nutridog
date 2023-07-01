@@ -1,6 +1,6 @@
 <?php $currentUrl = $_SERVER['REQUEST_URI']; ?>
 <section class="relative overflow-hidden">
-    <section class="container mt-4">
+    <section class="container mt-2">
         <div class="grid grid-cols-2">
         <p class="flex flex-row items-center text-black text-12 mb-4"><a href="/">Home</a> <span class="w-[4px] h-[4px] rounded-full bg-white block mx-1"></span> <a href="/producten">Producten</a></p>
         <div class="flex justify-end">
