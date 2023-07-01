@@ -77,11 +77,20 @@
          padding: 1px 10px 2px 10px;
          display: inline-block;
          outline: none;
-         border: 1px solid #797979;
+         border: 1px solid #f4c650;
          position: relative;
-         border-color: #797979 !important;
-         color: #797979 !important;
+         border-color: #f4c650 !important;
+         color: #ffffff !important;
          font-size: 12px;
+         background: #f4c650;
+         position: fixed;
+         z-index: 999;
+
+         @media only screen and (max-width: 600px) {
+             top: 145px;
+         }
+
+         top: 125px;
      }
 
      // MESSAGE
