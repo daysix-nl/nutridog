@@ -757,6 +757,9 @@ video {
 .h-screen {
   height: 100vh;
 }
+.h-3 {
+  height: 30px;
+}
 .w-2 {
   width: 20px;
 }

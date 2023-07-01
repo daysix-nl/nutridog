@@ -79,3 +79,21 @@
 .aws-container[data-show-page=false] .aws-search-form .aws-search-btn:hover {
     background: #fff;
 }
+
+.aws-container .aws-search-form {
+    position: relative;
+    width: 100%;
+    float: none !important;
+    display: -webkit-box !important;
+    display: -moz-box !important;
+    display: -ms-flexbox !important;
+    display: -webkit-flex !important;
+    display: flex !important;
+    align-items: stretch;
+
+    @media only screen and (max-width: 600px) {
+        height: 36px;
+    }
+
+    height: 44px;
+}

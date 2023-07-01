@@ -94,7 +94,7 @@
         </div>
         <!-- DESKTOP NAVBAR -->
         <div class="bg-roze w-screen">
-            <div class="flex justify-between items-center pb-2 md:pb-0 md:h-8 container">
+            <div class="flex justify-between items-center pb-2 md:pb-0 h-3 md:h-8 container">
                 <div class="col-span-1 hidden md:block">
                     <a href="/" class="text-30 font-titel text-white relative">dogcarexxl.nl</a>
                 </div>
