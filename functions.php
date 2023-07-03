@@ -212,6 +212,25 @@ function remove_product_columns($columns) {
     return $columns;
 }
 
+// Voeg de onderstaande code toe aan het functions.php bestand van je thema
+
+// Voeg een nieuwe kolom toe voor de aangepaste producteigenschap "filter"
+add_filter('manage_edit-product_columns', 'add_filter_product_column');
+function add_filter_product_column($columns) {
+    $columns['product_filter'] = 'Filter'; // Voeg de kolom "Filter" toe aan het productoverzicht
+    return $columns;
+}
+
+// Vul de nieuwe kolom met gegevens voor de aangepaste producteigenschap "filter"
+add_action('manage_product_posts_custom_column', 'fill_filter_product_column', 10, 2);
+function fill_filter_product_column($column, $post_id) {
+    if ($column === 'product_filter') {
+        // Hier moet je de code plaatsen om de "filter" eigenschap op te halen en weer te geven
+        // Je kunt bijvoorbeeld gebruikmaken van get_post_meta() om de aangepaste eigenschapwaarde op te halen
+        $filter_value = get_post_meta($post_id, 'filter', true);
+        echo $filter_value;
+    }
+}
 
 
 
