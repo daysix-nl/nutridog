@@ -212,41 +212,24 @@ function remove_product_columns($columns) {
     return $columns;
 }
 
-// Voeg de onderstaande code toe aan het functions.php bestand van je thema
 
-// Voeg een nieuwe kolom toe voor de attributen onder de slug "filter"
-add_filter('manage_edit-product_columns', 'add_attributes_product_column');
-function add_attributes_product_column($columns) {
-    $columns['product_attributes'] = 'Categorie'; // Voeg de kolom "Filter Attributes" toe aan het productoverzicht
-    return $columns;
-}
 
-// Vul de nieuwe kolom met gegevens voor de attributen onder de slug "filter"
-add_action('manage_product_posts_custom_column', 'fill_attributes_product_column', 10, 2);
-function fill_attributes_product_column($column, $post_id) {
-    if ($column === 'product_attributes') {
-        // Hier moet je de code plaatsen om de attributen onder de slug "filter" op te halen en weer te geven
-        $product_attributes = wc_get_product($post_id)->get_attributes();
-        if ($product_attributes) {
-            foreach ($product_attributes as $attribute) {
-                if ($attribute->get_name() === 'Dog Care XXL Categorie') {
-                    // Haal de waarde van het "filter" attribuut op voor het product
-                    $attribute_value = $attribute->get_options(); // Geeft een array van de attribuutopties terug
-                    $attribute_value = implode(', ', $attribute_value); // Optionele stap: Als je meerdere opties hebt, kun je ze samenvoegen met een komma en spatie
-                    echo $attribute_value;
-                }
-            }
+
+// TEST
+
+// Voeg een kolom toe aan het WooCommerce productoverzicht
+add_filter( 'manage_edit-product_columns', 'custom_product_attributes_column' );
+function custom_product_attributes_column( $columns ) {
+    $new_columns = array();
+    
+    foreach ( $columns as $column_key => $column_label ) {
+        $new_columns[ $column_key ] = $column_label;
+        
+        // Plaats de nieuwe kolom na de 'price' kolom, of kies een andere bestaande kolom om ervoor te plaatsen.
+        if ( $column_key === 'price' ) {
+            $new_columns['product_attributes'] = __( 'Attributes', 'textdomain' );
         }
     }
+    
+    return $new_columns;
 }
-
-
-
-
-
-
-
-
-
-
-
