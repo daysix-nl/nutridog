@@ -229,7 +229,7 @@ function fill_filter_attributes_product_column($column, $post_id) {
         $product_attributes = wc_get_product($post_id)->get_attributes();
         if ($product_attributes) {
             foreach ($product_attributes as $attribute) {
-                if ($attribute->get_name() === 'filter') {
+                if ($attribute->get_name() === 'Dog Care XXL Categorie') {
                     // Haal de waarde van het "filter" attribuut op voor het product
                     $attribute_value = $attribute->get_options(); // Geeft een array van de attribuutopties terug
                     $attribute_value = implode(', ', $attribute_value); // Optionele stap: Als je meerdere opties hebt, kun je ze samenvoegen met een komma en spatie
