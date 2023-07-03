@@ -215,15 +215,15 @@ function remove_product_columns($columns) {
 // Voeg de onderstaande code toe aan het functions.php bestand van je thema
 
 // Voeg een nieuwe kolom toe voor de attributen onder de slug "filter"
-add_filter('manage_edit-product_columns', 'add_filter_attributes_product_column');
-function add_filter_attributes_product_column($columns) {
+add_filter('manage_edit-product_columns', 'add_attributes_product_column');
+function add_attributes_product_column($columns) {
     $columns['product_attributes'] = 'Categorie'; // Voeg de kolom "Filter Attributes" toe aan het productoverzicht
     return $columns;
 }
 
 // Vul de nieuwe kolom met gegevens voor de attributen onder de slug "filter"
-add_action('manage_product_posts_custom_column', 'fill_filter_attributes_product_column', 10, 2);
-function fill_filter_attributes_product_column($column, $post_id) {
+add_action('manage_product_posts_custom_column', 'fill_attributes_product_column', 10, 2);
+function fill_attributes_product_column($column, $post_id) {
     if ($column === 'product_attributes') {
         // Hier moet je de code plaatsen om de attributen onder de slug "filter" op te halen en weer te geven
         $product_attributes = wc_get_product($post_id)->get_attributes();
