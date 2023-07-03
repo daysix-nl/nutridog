@@ -233,3 +233,25 @@ function custom_product_attributes_column( $columns ) {
     
     return $new_columns;
 }
+
+
+
+// Geef de inhoud weer voor de nieuwe kolom in het productoverzicht
+add_action( 'manage_product_posts_custom_column', 'custom_product_attributes_column_content' );
+function custom_product_attributes_column_content( $column ) {
+    global $post;
+    
+    if ( $column === 'product_attributes' ) {
+        // Haal de productattributen op voor het huidige product
+        $product_attributes = wc_get_product($post->ID)->get_attributes();
+        
+        // Controleer of er attributen zijn
+        if ( ! empty( $product_attributes ) ) {
+            foreach ( $product_attributes as $attribute ) {
+                echo '<p>' . $attribute['name'] . ': ' . $attribute['value'] . '</p>';
+            }
+        } else {
+            echo '<p>' . __('None', 'textdomain') . '</p>';
+        }
+    }
+}
