@@ -248,7 +248,7 @@ function custom_product_attributes_column_content( $column ) {
             foreach ( $product_attributes as $attribute ) {
                 // Voeg hier de naam van het aangepaste attribuut toe dat je wilt weergeven
                 if ( $attribute->get_name() === 'pa_filter' ) {
-                    echo '<p>' . $attribute->get_name() . ': ' . $attribute->get_options()[0] . '</p>';
+                    echo '<p>' $term_name'</p>';
                 }
             }
         } else {
