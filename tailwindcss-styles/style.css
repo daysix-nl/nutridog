@@ -721,6 +721,9 @@ video {
 .h-2 {
   height: 20px;
 }
+.h-5 {
+  height: 50px;
+}
 .h-6 {
   height: 60px;
 }
@@ -756,12 +759,6 @@ video {
 }
 .h-screen {
   height: 100vh;
-}
-.h-3 {
-  height: 30px;
-}
-.h-5 {
-  height: 50px;
 }
 .w-2 {
   width: 20px;
