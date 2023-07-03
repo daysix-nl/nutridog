@@ -234,8 +234,6 @@ function custom_product_attributes_column( $columns ) {
     return $new_columns;
 }
 
-
-
 // Geef de inhoud weer voor de nieuwe kolom in het productoverzicht
 add_action( 'manage_product_posts_custom_column', 'custom_product_attributes_column_content' );
 function custom_product_attributes_column_content( $column ) {
@@ -248,7 +246,10 @@ function custom_product_attributes_column_content( $column ) {
         // Controleer of er attributen zijn
         if ( ! empty( $product_attributes ) ) {
             foreach ( $product_attributes as $attribute ) {
-                echo '<p>' . $attribute['name'] . ': ' . $attribute['value'] . '</p>';
+                // Voeg hier de naam van het aangepaste attribuut toe dat je wilt weergeven
+                if ( $attribute->get_name() === 'pa_filter' ) {
+                    echo '<p>' . $attribute->get_name() . ': ' . $attribute->get_options()[0] . '</p>';
+                }
             }
         } else {
             echo '<p>' . __('None', 'textdomain') . '</p>';
