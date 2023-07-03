@@ -221,16 +221,16 @@ function remove_product_columns($columns) {
 add_filter( 'manage_edit-product_columns', 'custom_product_attributes_column' );
 function custom_product_attributes_column( $columns ) {
     $new_columns = array();
-    
+
     foreach ( $columns as $column_key => $column_label ) {
         $new_columns[ $column_key ] = $column_label;
-        
+
         // Plaats de nieuwe kolom na de 'price' kolom, of kies een andere bestaande kolom om ervoor te plaatsen.
         if ( $column_key === 'price' ) {
-            $new_columns['product_attributes'] = __( 'Attributes', 'textdomain' );
+            $new_columns['product_attributes'] = __( 'Dog Care XXL Categorie', 'textdomain' );
         }
     }
-    
+
     return $new_columns;
 }
 
@@ -238,17 +238,34 @@ function custom_product_attributes_column( $columns ) {
 add_action( 'manage_product_posts_custom_column', 'custom_product_attributes_column_content' );
 function custom_product_attributes_column_content( $column ) {
     global $post;
-    
+
     if ( $column === 'product_attributes' ) {
         // Haal de productattributen op voor het huidige product
         $product_attributes = wc_get_product($post->ID)->get_attributes();
-        
+
         // Controleer of er attributen zijn
         if ( ! empty( $product_attributes ) ) {
             foreach ( $product_attributes as $attribute ) {
                 // Voeg hier de naam van het aangepaste attribuut toe dat je wilt weergeven
                 if ( $attribute->get_name() === 'pa_filter' ) {
-                    echo '<p>' $term_name'</p>';
+                    $attribute_name = wc_attribute_label( $attribute->get_name() );
+                    $attribute_value_ids = $attribute->get_options();
+
+                    if ( ! empty( $attribute_value_ids ) ) {
+                        $attribute_values = array();
+
+                        foreach ( $attribute_value_ids as $value_id ) {
+                            $term = get_term_by( 'term_id', $value_id, $attribute->get_taxonomy() );
+                            if ( $term ) {
+                                $attribute_values[] = $term->name;
+                            }
+                        }
+
+                        $attribute_value = implode( ', ', $attribute_values );
+                        echo '<p>' . $attribute_value . '</p>';
+                    } else {
+                        echo '<p>' . __('None', 'textdomain') . '</p>';
+                    }
                 }
             }
         } else {
@@ -256,3 +273,4 @@ function custom_product_attributes_column_content( $column ) {
         }
     }
 }
+
