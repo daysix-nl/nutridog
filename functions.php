@@ -207,7 +207,7 @@ if( function_exists('acf_add_options_page') ) {
 // Verwijder de kolommen 'Categorieën' en 'Uitgelicht' uit het WooCommerce productoverzicht
 add_filter('manage_edit-product_columns', 'remove_product_columns');
 function remove_product_columns($columns) {
-    unset($columns['product_cat']); // Verwijder 'Categorieën'
+    unset($columns['featured']); // Verwijder 'Categorieën'
     unset($columns['product_tag']); // Verwijder 'Uitgelicht'
     return $columns;
 }
