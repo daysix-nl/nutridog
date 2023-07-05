@@ -14,7 +14,7 @@
     <div class="absolute top-0 left-0 right-0 bottom-0" style="box-shadow: rgb(0 0 0 / 10%) 0 0 0 100vw inset;"></div>
     <div class="container z-10">
         <div class="flex flex-col md:justify-center items-center mb-5">
-            <h1 class="text-28 leading-28 md:text-40 md:leading-60 mb-3 text-one font-titel">Alles voor een gezonde hond</h1>
+            <h1 class="text-25 leading-25 md:text-40 md:leading-60 mb-3 text-one font-titel">Alles voor een gezonde hond</h1>
             <div class="grid grid-cols-2 md:grid-cols-5 gap-[15px] w-full">
                 <a href="/producten/categorie-mondverzorging/" class="col-span-1 flex items-center justify-center py-1 text-15 bg-white text-grijs hover:opacity-[.8] duration-300">Mondverzorging</a>
                 <a href="/producten/categorie-oorverzorging" class="col-span-1 flex items-center justify-center py-1 text-15 bg-white text-grijs hover:opacity-[.8] duration-300">Oorverzorging</a>
