@@ -59,8 +59,7 @@
                 <?php endif; ?>
 
             </div>
-            <div class="col-span-1 grid grid-cols-2 md:grid-cols-3 gap-2 md:gap-3"> 
-                <div class="justify-end hidden md:flex">
+            <div class="justify-end hidden md:flex">
                     <?php
                     /**
                      * Hook: woocommerce_archive_description.
@@ -70,7 +69,9 @@
                      */
                     do_action( 'woocommerce_archive_description' );
                     ?>
-                </div>                         
+                </div> 
+            <div class="col-span-1 grid grid-cols-2 md:grid-cols-3 gap-2 md:gap-3"> 
+                                        
                 <?php
                     $args = array(
                         'post_type' => 'product',
