@@ -1037,6 +1037,12 @@ video {
 .pt-8 {
   padding-top: 80px;
 }
+.pt-\[112px\] {
+  padding-top: 112px;
+}
+.pt-\[116px\] {
+  padding-top: 116px;
+}
 .text-left {
   text-align: left;
 }
@@ -1079,6 +1085,9 @@ video {
 .text-24 {
   font-size: 24px;
 }
+.text-25 {
+  font-size: 25px;
+}
 .text-28 {
   font-size: 28px;
 }
@@ -1090,9 +1099,6 @@ video {
 }
 .text-\[14\.56px\] {
   font-size: 14.56px;
-}
-.text-25 {
-  font-size: 25px;
 }
 .font-black {
   font-weight: 900;
@@ -1124,6 +1130,9 @@ video {
 .leading-24 {
   line-height: 24px;
 }
+.leading-25 {
+  line-height: 25px;
+}
 .leading-28 {
   line-height: 28px;
 }
@@ -1132,9 +1141,6 @@ video {
 }
 .leading-65 {
   line-height: 65px;
-}
-.leading-25 {
-  line-height: 25px;
 }
 .text-black {
   --tw-text-opacity: 1;
@@ -1341,6 +1347,10 @@ video {
 
   .md\:pt-5 {
     padding-top: 50px;
+  }
+
+  .md\:pt-\[112px\] {
+    padding-top: 112px;
   }
 
   .md\:text-100 {

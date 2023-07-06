@@ -118,4 +118,4 @@
 
 </header>
 
-<main>
+<main class="pt-[116px] md:pt-[112px]">
