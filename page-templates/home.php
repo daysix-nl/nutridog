@@ -38,7 +38,14 @@
 </div>
 
 <div class="h-screen">
-   
+   <div class="container pt-6">
+    <div class="grid grid-cols-3">
+        <div class="col-span-1">
+            <img src="/wp-content/themes/dogcare/img/local/test.png" alt="" class="w-full">
+        </div>
+    </div>
+    
+   </div>
 </div>
 
 
