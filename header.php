@@ -10,9 +10,9 @@
 <head>
     <meta charset="<?php bloginfo( 'charset' ); ?>">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-   <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Hind:wght@300;400;500;600;700&family=Montserrat:wght@600;900&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Hind:wght@300;400;500;600;700&family=Montserrat:wght@600;900&display=swap" rel="stylesheet">
     <title><?php bloginfo( 'name' ); ?> | <?php the_title(); ?></title>
     <?php wp_head(); ?>
 </head>
@@ -118,4 +118,4 @@
 
 </header>
 
-<main class="pt-[116px] md:pt-[112px]">
+<main class="pt-[115px] md:pt-[112px]">

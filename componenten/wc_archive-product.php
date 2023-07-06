@@ -3,7 +3,7 @@
     <section class="container mt-2">
         <div class="grid grid-cols-2">
         <p class="flex flex-row items-center text-black text-12 mb-4"><a href="/">Home</a> <span class="w-[4px] h-[4px] rounded-full bg-white block mx-1"></span> <a href="/producten">Producten</a></p>
-        <div class="flex justify-end">
+        <div class="justify-end hidden md:flex">
             <?php
             /**
              * Hook: woocommerce_archive_description.
@@ -59,7 +59,18 @@
                 <?php endif; ?>
 
             </div>
-            <div class="col-span-1 grid grid-cols-2 md:grid-cols-3 gap-2 md:gap-3">                          
+            <div class="col-span-1 grid grid-cols-2 md:grid-cols-3 gap-2 md:gap-3"> 
+                <div class="justify-end hidden md:flex">
+                    <?php
+                    /**
+                     * Hook: woocommerce_archive_description.
+                     *
+                     * @hooked woocommerce_taxonomy_archive_description - 10
+                     * @hooked woocommerce_product_archive_description - 10
+                     */
+                    do_action( 'woocommerce_archive_description' );
+                    ?>
+                </div>                         
                 <?php
                     $args = array(
                         'post_type' => 'product',
