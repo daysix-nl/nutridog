@@ -227,7 +227,7 @@ function custom_product_attributes_column( $columns ) {
 
         // Plaats de nieuwe kolom na de 'price' kolom, of kies een andere bestaande kolom om ervoor te plaatsen.
         if ( $column_key === 'price' ) {
-            $new_columns['product_attributes'] = __( 'Dog Care XXL Categorie', 'textdomain' );
+            $new_columns['product_attributes'] = __( 'Nutri Dog Categorie', 'textdomain' );
         }
     }
 
