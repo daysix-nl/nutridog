@@ -437,13 +437,14 @@
          background-color: #fc8869 !important;
          color: #fff !important;
          font-size: 16px !important;
+         font-weight: 400 !important;
          line-height: 16px !important;
          padding-top: 15px !important;
          padding-bottom: 15px !important;
          padding-left: 30px !important;
          padding-right: 30px !important;
-         border: 2px solid #fc8869 !important;
-         border-radius: 9999px !important;
+         border: 0px solid #fc8869 !important;
+         border-radius: 0px !important;
          width: fit-content !important;
          transition-property: color, background-color, border-color,
              text-decoration-color, fill, stroke !important;
