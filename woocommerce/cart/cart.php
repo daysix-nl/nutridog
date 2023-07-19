@@ -17,4 +17,4 @@
 
 defined( 'ABSPATH' ) || exit; ?>
 
-<?php include get_template_directory() . '/componenten/wc_cart_cart.php'; ?>
+<?php include get_template_directory() . '/componenten/wc_checkout_checkout.php'; ?>
