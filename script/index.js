@@ -102,96 +102,96 @@ try {
   tabWrappers.forEach((tabWrapper, index) => inittab(tabWrapper));
 } catch (error) { }
 
-try {
-  window.addEventListener("scroll", () => {
-    const scrollpos = window.scrollY;
-    const logo = document.querySelector(".logo-svg");
-    const header = document.querySelector(".header-white");
-    const desktopDropDown = document.querySelector(".desktop-dropdown");
+// try {
+//   window.addEventListener("scroll", () => {
+//     const scrollpos = window.scrollY;
+//     const logo = document.querySelector(".logo-svg");
+//     const header = document.querySelector(".header-white");
+//     const desktopDropDown = document.querySelector(".desktop-dropdown");
 
-    if (scrollpos > 50) {
-      if (!header.classList.contains("active")) {
-        logo.classList.add("active");
-        header.classList.add("active");
-        desktopDropDown.style.top = "80px";
-      }
-    } else if (scrollpos < 25) {
-      logo.classList.remove("active");
-      header.classList.remove("active");
-      desktopDropDown.style.top = "110px";
-    }
-  });
-  window.addEventListener("load", () => {
-    const scrollpos = window.scrollY;
-    const logo = document.querySelector(".logo-svg");
-    const header = document.querySelector(".header-white");
-    const desktopDropDown = document.querySelector(".desktop-dropdown");
+//     if (scrollpos > 50) {
+//       if (!header.classList.contains("active")) {
+//         logo.classList.add("active");
+//         header.classList.add("active");
+//         desktopDropDown.style.top = "80px";
+//       }
+//     } else if (scrollpos < 25) {
+//       logo.classList.remove("active");
+//       header.classList.remove("active");
+//       desktopDropDown.style.top = "110px";
+//     }
+//   });
+//   window.addEventListener("load", () => {
+//     const scrollpos = window.scrollY;
+//     const logo = document.querySelector(".logo-svg");
+//     const header = document.querySelector(".header-white");
+//     const desktopDropDown = document.querySelector(".desktop-dropdown");
 
-    if (scrollpos > 50) {
-      if (!header.classList.contains("active")) {
-        logo.classList.add("active");
-        header.classList.add("active");
-        desktopDropDown.style.top = "80px";
-      }
-    } else if (scrollpos < 20) {
-      logo.classList.remove("active");
-      header.classList.remove("active");
-      desktopDropDown.style.top = "110px";
-    }
-  });
-} catch (error) { }
+//     if (scrollpos > 50) {
+//       if (!header.classList.contains("active")) {
+//         logo.classList.add("active");
+//         header.classList.add("active");
+//         desktopDropDown.style.top = "80px";
+//       }
+//     } else if (scrollpos < 20) {
+//       logo.classList.remove("active");
+//       header.classList.remove("active");
+//       desktopDropDown.style.top = "110px";
+//     }
+//   });
+// } catch (error) { }
 
-try {
-  window.addEventListener("load", function () {
-    var cardContainer = document.querySelector(".card-container");
-    var cardsPerRow = 3;
-    var cardCount = cardContainer.children.length;
-    var rowCount = Math.ceil(cardCount / cardsPerRow);
+// try {
+//   window.addEventListener("load", function () {
+//     var cardContainer = document.querySelector(".card-container");
+//     var cardsPerRow = 3;
+//     var cardCount = cardContainer.children.length;
+//     var rowCount = Math.ceil(cardCount / cardsPerRow);
 
-    // Loop through each row of cards and add or remove the no-border class
-    for (var i = 0; i < rowCount; i++) {
-      var startIndex = i * cardsPerRow;
-      var endIndex = startIndex + cardsPerRow;
-      var rowCards = Array.from(cardContainer.children).slice(
-        startIndex,
-        endIndex
-      );
+//     // Loop through each row of cards and add or remove the no-border class
+//     for (var i = 0; i < rowCount; i++) {
+//       var startIndex = i * cardsPerRow;
+//       var endIndex = startIndex + cardsPerRow;
+//       var rowCards = Array.from(cardContainer.children).slice(
+//         startIndex,
+//         endIndex
+//       );
 
-      if (i === rowCount - 1) {
-        rowCards.forEach(function (card) {
-          card.classList.remove("border-b-[1px]");
-          card.classList.remove("mb-4");
-          card.classList.remove("pb-4");
-        });
-      }
-    }
-  });
-} catch (error) { }
+//       if (i === rowCount - 1) {
+//         rowCards.forEach(function (card) {
+//           card.classList.remove("border-b-[1px]");
+//           card.classList.remove("mb-4");
+//           card.classList.remove("pb-4");
+//         });
+//       }
+//     }
+//   });
+// } catch (error) { }
 
-try {
-  /**********************/
-  /**** accordion ***/
-  /**********************/
-  const acc = document.getElementsByClassName("accordion");
+// try {
+//   /**********************/
+//   /**** accordion ***/
+//   /**********************/
+//   const acc = document.getElementsByClassName("accordion");
 
-  for (let i = 0; i < acc.length; i++) {
-    acc[i].addEventListener("click", function () {
-      const panel = this.nextElementSibling;
-      this.classList.toggle("active");
-      panel.style.height =
-        panel.style.height === panel.scrollHeight + "px"
-          ? "0"
-          : panel.scrollHeight + "px";
+//   for (let i = 0; i < acc.length; i++) {
+//     acc[i].addEventListener("click", function () {
+//       const panel = this.nextElementSibling;
+//       this.classList.toggle("active");
+//       panel.style.height =
+//         panel.style.height === panel.scrollHeight + "px"
+//           ? "0"
+//           : panel.scrollHeight + "px";
 
-      for (let j = 0; j < acc.length; j++) {
-        if (this !== acc[j]) {
-          acc[j].classList.remove("active");
-          acc[j].nextElementSibling.style.height = "0";
-        }
-      }
-    });
-  }
-} catch (error) { }
+//       for (let j = 0; j < acc.length; j++) {
+//         if (this !== acc[j]) {
+//           acc[j].classList.remove("active");
+//           acc[j].nextElementSibling.style.height = "0";
+//         }
+//       }
+//     });
+//   }
+// } catch (error) { }
 
 
 

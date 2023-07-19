@@ -413,6 +413,11 @@
          // }
      }
 
+     .woocommerce form .form-row label,
+     .woocommerce-page form .form-row label {
+         display: contents !important;
+     }
+
      .quantity-input {
          &:focus {
              outline: none;
@@ -428,16 +433,16 @@
      }
 
      button.button {
-         background: transparent !important;
-         background-color: transparent !important;
-         color: #0000 !important;
-         font-size: 18px !important;
-         line-height: 18px !important;
+         background: #fc8869 !important;
+         background-color: #fc8869 !important;
+         color: #fff !important;
+         font-size: 16px !important;
+         line-height: 16px !important;
          padding-top: 15px !important;
          padding-bottom: 15px !important;
          padding-left: 30px !important;
          padding-right: 30px !important;
-         border: 2px solid #000 !important;
+         border: 2px solid #fc8869 !important;
          border-radius: 9999px !important;
          width: fit-content !important;
          transition-property: color, background-color, border-color,
@@ -446,15 +451,14 @@
          transition-duration: 150ms !important;
 
          &#place_order {
-             background: #f49a4e !important;
-             background-color: #f49a4e !important;
+             background: #fc8869 !important;
+             background-color: #fc8869 !important;
              color: #ffffff !important;
          }
      }
 
      button.button:hover {
-         background-color: #f49a4e !important;
-         color: #ffffff !important;
+         opacity: 0.8 !important;
          transition-property: color, background-color, border-color,
              text-decoration-color, fill, stroke !important;
          transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1) !important;
