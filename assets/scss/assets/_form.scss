@@ -239,11 +239,9 @@
          }
 
          th {
-             text-transform: uppercase;
              font-weight: 700 !important;
-             font-size: 26px;
+             font-size: 18px;
              padding: 0px !important;
-             letter-spacing: 0.8px !important;
          }
 
          td {
@@ -292,7 +290,7 @@
      .woocommerce-checkout #payment div.payment_box::before {
          content: "";
          display: block;
-         border: 1em solid #e7e7e7 !important;
+         border: 0px solid #e7e7e7 !important;
          border-right-color: transparent;
          border-left-color: transparent;
          border-top-color: transparent;
