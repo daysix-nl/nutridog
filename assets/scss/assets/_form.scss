@@ -193,7 +193,7 @@
 
      .woocommerce-billing-fields label,
      .woocommerce-shipping-fields label {
-         display: none !important;
+         color: #9ca3af !important;
      }
 
      #ship-to-different-address label {
@@ -232,15 +232,15 @@
          table.shop_table {
              border: 0px solid rgba(0, 0, 0, 0.1) !important;
              margin-top: 30px;
-             background: #2e4a58 !important;
+             background: #f3f3f3 !important;
              padding: 30px !important;
              border-radius: 8px !important;
-             color: #fff !important;
+             color: #000 !important;
          }
 
          th {
-             font-family: fredericknormal;
              text-transform: uppercase;
+             font-weight: 700 !important;
              font-size: 26px;
              padding: 0px !important;
              letter-spacing: 0.8px !important;
@@ -274,7 +274,7 @@
      #add_payment_method #payment,
      .woocommerce-cart #payment,
      .woocommerce-checkout #payment {
-         background: #f0e9e3 !important;
+         background: #f3f3f3 !important;
          border-radius: 8px !important;
          padding: 30px !important;
      }
@@ -283,7 +283,7 @@
      .woocommerce-cart #payment div.payment_box,
      .woocommerce-checkout #payment div.payment_box {
          border-radius: 8px !important;
-         background-color: #dfd9d3 !important;
+         background-color: #e7e7e7 !important;
          color: #263e3a !important;
      }
 
@@ -292,7 +292,7 @@
      .woocommerce-checkout #payment div.payment_box::before {
          content: "";
          display: block;
-         border: 1em solid #dfd9d3;
+         border: 1em solid #e7e7e7 !important;
          border-right-color: transparent;
          border-left-color: transparent;
          border-top-color: transparent;
@@ -300,6 +300,10 @@
          top: -0.75em;
          left: 0;
          margin: -1em 0 0 2em;
+     }
+
+     .wc_payment_method label {
+         font-weight: 700 !important;
      }
 
      .woocommerce a.remove {
