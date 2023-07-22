@@ -76,6 +76,7 @@
                     $args = array(
                         'post_type' => 'product',
                         'posts_per_page' => -1,
+                        'orderby' => 'rand',
 
                         );
                     $loop = new WP_Query( $args );
