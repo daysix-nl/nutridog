@@ -274,3 +274,21 @@ function custom_product_attributes_column_content( $column ) {
     }
 }
 
+
+
+
+// Automatisch samenvatten van productomschrijvingen in Kort omschrijving
+function auto_summarize_product_description($post_id) {
+    if (empty(get_post_meta($post_id, '_short_description', true))) {
+        $product = wc_get_product($post_id);
+        $product_description = $product->get_description();
+
+        // Voeg hier je code toe om de samenvatting te genereren.
+        // Bijvoorbeeld, een eenvoudige samenvatting van de eerste zin:
+        $sentences = preg_split('/(?<!\w\.\w.)(?<![A-Z][a-z]\.)(?<=\.|\?)\s/', $product_description, -1, PREG_SPLIT_NO_EMPTY);
+        $summary = trim($sentences[0]);
+
+        update_post_meta($post_id, '_short_description', $summary);
+    }
+}
+add_action('save_post_product', 'auto_summarize_product_description');
