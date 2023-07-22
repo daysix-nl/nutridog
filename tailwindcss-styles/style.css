@@ -769,6 +769,12 @@ video {
 .h-screen {
   height: 100vh;
 }
+.max-h-\[200px\] {
+  max-height: 200px;
+}
+.max-h-\[225px\] {
+  max-height: 225px;
+}
 .w-2 {
   width: 20px;
 }
@@ -797,8 +803,17 @@ video {
 .w-screen {
   width: 100vw;
 }
+.w-auto {
+  width: auto;
+}
 .max-w-\[800px\] {
   max-width: 800px;
+}
+.max-w-\[200px\] {
+  max-width: 200px;
+}
+.max-w-\[225px\] {
+  max-width: 225px;
 }
 .-translate-y-1\/2 {
   --tw-translate-y: -50%;

@@ -88,7 +88,7 @@
                         <div class="col-span-1 h-full relative pb-[95px] bg-one shadow-block md:hover:scale-105 duration-300">
                             <div class="relative bg-one ">
                                 <a class="bg-half aspect-square flex justify-center items-center py-3" href="<?php the_permalink(); ?>">
-                                    <img class="h-full" src="<?php echo get_the_post_thumbnail_url($loop->post->ID); ?>" alt="">
+                                    <img class="h-auto w-auto max-w-[225px] max-h-[225px]" src="<?php echo get_the_post_thumbnail_url($loop->post->ID); ?>" alt="">
                                 </a>
                                 <div class="bg-one px-[15px] md:px-3 pb-3 text-ellipsis overflow-hidden">
                                     <a class="text-16 leading-20 font-titel" href="<?php the_permalink(); ?>"><?php echo $loop->post->post_title; ?></a>
