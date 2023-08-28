@@ -45,13 +45,13 @@ if ( post_password_required() ) {
                         <div thumbsSlider="" class="swiper mySwiper mt-2 md:mt-3">
                             <div class="swiper-wrapper">
                                 <div class="swiper-slide overflow-hidden aspect-square flex justify-center items-center py-1 cursor-pointer bg-one">
-                                    <img class="h-full" src="<?php echo wp_get_attachment_url( $product->get_image_id() ); ?>" />
+                                    <img class="h-full max-h-[50px]" src="<?php echo wp_get_attachment_url( $product->get_image_id() ); ?>" />
                                 </div>    
                             <?php $attachment_ids = $product->get_gallery_image_ids();
                                 foreach( $attachment_ids as $attachment_id ) 
                                 { ?>
                                 <div class="swiper-slide rounded-3xl overflow-hidden w-full cursor-pointer bg-one">
-                                    <img class="aspect-square object-cover h-full w-full" src="<?php echo $Original_image_url = wp_get_attachment_url( $attachment_id ); ?>" />
+                                    <img class="aspect-square object-cover h-full w-full max-h-[50px]" src="<?php echo $Original_image_url = wp_get_attachment_url( $attachment_id ); ?>" />
                                 </div>   
                             <?php } ?>
                             </div>

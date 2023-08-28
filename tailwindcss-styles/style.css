@@ -784,6 +784,9 @@ video {
 .max-h-\[330px\] {
   max-height: 330px;
 }
+.max-h-\[50px\] {
+  max-height: 50px;
+}
 .min-h-\[225px\] {
   min-height: 225px;
 }
