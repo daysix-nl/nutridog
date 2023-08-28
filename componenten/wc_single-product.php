@@ -65,30 +65,7 @@ if ( post_password_required() ) {
                         </div>
                     </div>
 
-                     <div class="shadow-block md:hidden bg-white my-3 p-3">
-                             
-                            <?php
-
-                            // Check rows existexists.
-                            if( have_rows('repeater_usps') ):
-
-                                // Loop through rows.
-                                while( have_rows('repeater_usps') ) : the_row(); ?>
-
-                                    <div class="flex">
-                                        <div class="w-fit mr-2"><?php include get_template_directory() . '/img/icons/vinkje.php'; ?></div>
-                                        <div class="text-18 leading-28 text-grijs"><?php the_sub_field('repeater_usps_item');?></div>
-                                    </div>
-                                <?php
-                                // End loop.
-                                endwhile;
-
-                            // No value.
-                            else :
-                                // Do something...
-                            endif; ?>
-
-                        </div>
+                   
                     
 
                     <div class="md:col-span-2 grid md:mt-6 gap-y-4 gap-x-2.5 md:mr-4 items-start">
@@ -99,93 +76,7 @@ if ( post_password_required() ) {
                     </div>
                 </div>
 
-                <div class="col-span-1 hidden md:block">
-                    <div class="grid">
-                        <div class="shadow-block bg-white p-3">
-                             
-                            <?php
-
-                            // Check rows existexists.
-                            if( have_rows('repeater_usps') ):
-
-                                // Loop through rows.
-                                while( have_rows('repeater_usps') ) : the_row(); ?>
-
-                                    <div class="flex">
-                                        <div class="w-fit mr-2"><?php include get_template_directory() . '/img/icons/vinkje.php'; ?></div>
-                                        <div class="text-18 leading-28 text-grijs"><?php the_sub_field('repeater_usps_item');?></div>
-                                    </div>
-                                <?php
-                                // End loop.
-                                endwhile;
-
-                            // No value.
-                            else :
-                                // Do something...
-                            endif; ?>
-
-                        </div>
-                           <div class="col-span-1 pt-6 pb-2">
-                            <p class="font-titel">Bekijk ook deze eens:</p>
-                        </div>
-                        <div class="col-span-1 grid grid-cols-2 gap-2 h-full">
-                                
-                <?php   global $post;
-                $terms = get_the_terms( $post->ID, 'product_cat' );
-                $nterms = get_the_terms( $post->ID, 'product_tag'  );
-                foreach ($terms  as $term  ) {
-                    $product_cat_id = $term->term_id;
-                    $product_cat_name = $term->name;
-                    break;
-                }
-                ?>
-                        <?php                     
-                        $loop = new WP_Query( array(
-                            'post_type' => 'product',
-                            'posts_per_page' => 6,
-                            'orderby' => 'RAND',
-							'product_cat' => $product_cat_name
-                        ));
-                        ?>
-
-                        <?php while ( $loop->have_posts() ) : $loop->the_post(); ?>
-
-                        <div class="col-span-1 relative bg-one shadow-block">
-                            <div class="relative bg-one pb-6">
-                                <a class="bg-half aspect-square flex justify-center items-center py-2" href="<?php the_permalink(); ?>">
-                                    <img class="h-full" src="<?php echo get_the_post_thumbnail_url($loop->post->ID); ?>" alt="">
-                                </a>
-                                <div class="bg-one px-[15px] pb-2 text-ellipsis overflow-hidden">
-                                    <a class="text-12 leading-12 font-titel" href="<?php the_permalink(); ?>"><?php echo $loop->post->post_title; ?></a>
-                                    <p class="text-12 leading-16 pt-1 text-grijs"><?php echo $loop->post->post_excerpt; ?></p>
-                                </div>
-                                <?php 
-                                if ( $product->is_on_sale() ) {
-                                    $regular_price = $product->get_regular_price();
-                                    $sale_price = $product->get_sale_price();
-
-                                    if ( $regular_price && $sale_price ) {
-                                        $discount_percentage = round( ( ( $regular_price - $sale_price ) / $regular_price ) * 100 );
-                                        echo '<span class="absolute top-1 left-1 bg-geel px-1 py-[5px] text-white text-12">' . $discount_percentage . '% korting</span>';
-                                    }
-                                }
-                                ?>
-                            </div>
-                             <div class="absolute bottom-0 left-0 right-0">
-                                <div class="px-[15px] pb-2">
-                                    <p class="text-16 leading-16 pt-2 price text-roze font-titel font-black"><?php if ( $price_html = $product->get_price_html() ) : ?><?php echo $price_html; ?><?php endif; ?></p>
-                                </div>
-                                  <div class="grid grid-cols-1">
-                                    <a class="col-span-1 bg-three px-2 py-[7px] hover:opacity-80 duration-300" href="<?php the_permalink(); ?>">
-                                        <p class="text-14 text-center text-white">Bekijk product</p>
-                                    </a>
-                                </div>
-                            </div>
-                        </div>  
-                        <?php endwhile; wp_reset_query(); ?>
-                        </div>
-                    </div>
-                </div>
+                
             </div>
 
 
