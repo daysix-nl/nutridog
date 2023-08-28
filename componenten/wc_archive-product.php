@@ -59,7 +59,7 @@
                     ?>
                 </div> 
             <div class="col-span-1 grid grid-cols-2 md:grid-cols-3 gap-2 md:gap-3"> 
-                <?php $current_url = (isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] === 'on' ? "https" : "http") . "://" . $_SERVER['HTTP_HOST'] . $_SERVER['REQUEST_URI']; ?>         
+               
                 <?php
                     $args = array(
                         'post_type' => 'product',
@@ -102,15 +102,12 @@
                                 <?php
                                 // Controleer of het product een simple product is
                                 if ( 'simple' === get_post_type() ) {  ?>
-                                <?php $sku = $product->get_sku(); ?>
-                                <div class="grid grid-cols-1 lg:grid-cols-2">
-                                    <a class="hidden lg:block col-span-1 bg-one px-2 py-[8px] hover:opacity-80 duration-300" href="<?php echo $current_url ?>&add-to-cart=<?php echo $sku ?>">
-                                         <p class="text-13 leading-13 text-center">In winkelwagen</p>
-                                    </a>
-                                    <a class="col-span-1 bg-roze px-2 py-[7px] hover:opacity-80 duration-300" href="<?php the_permalink(); ?>">
-                                        <p class="text-13 leading-13 text-center text-white">Bekijk product</p>
-                                    </a>
-                                </div>
+                            
+                               <div class="grid grid-cols-1">
+                                        <a class="col-span-1 bg-roze px-2 py-[8px] hover:opacity-80 duration-300" href="<?php the_permalink(); ?>">
+                                            <p class="text-13 leading-13 text-center text-white">Bekijk product</p>
+                                        </a>
+                                    </div>
                                     <?php
                                 } 
                                 // Controleer of het product een variable product is
@@ -126,11 +123,8 @@
                                     </div>
                                     <?php
                                     } else { ?>
-                                    <div class="grid grid-cols-1 lg:grid-cols-2">
-                                         <a class="hidden lg:block col-span-1 bg-one px-2 py-[8px] hover:opacity-80 duration-300" href="<?php echo $current_url ?>&add-to-cart=<?php echo $sku ?>">
-                                            <p class="text-13 leading-13 text-center">In winkelwagen</p>
-                                        </a>
-                                        <a class="col-span-1 bg-roze px-2 py-[7px] hover:opacity-80 duration-300" href="<?php the_permalink(); ?>">
+                                   <div class="grid grid-cols-1">
+                                        <a class="col-span-1 bg-roze px-2 py-[8px] hover:opacity-80 duration-300" href="<?php the_permalink(); ?>">
                                             <p class="text-13 leading-13 text-center text-white">Bekijk product</p>
                                         </a>
                                     </div>
