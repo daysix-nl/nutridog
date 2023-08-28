@@ -32,18 +32,18 @@ try {
   }
 } catch (error) { }
 
-// try {
-//   const observer = new IntersectionObserver((entries) => {
-//     entries.forEach((entry) => {
-//       if (entry.isIntersecting) {
-//         entry.target.classList.add("show");
-//       }
-//     });
-//   });
+try {
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add("show");
+      }
+    });
+  });
 
-//   const hiddenElements = document.querySelectorAll(".section-image-fade-in");
-//   hiddenElements.forEach((el) => observer.observe(el));
-// } catch (error) {}
+  const hiddenElements = document.querySelectorAll(".section-image-fade-in");
+  hiddenElements.forEach((el) => observer.observe(el));
+} catch (error) { }
 
 try {
   const buttonHamburger = document.querySelector(".hamburger-button");
