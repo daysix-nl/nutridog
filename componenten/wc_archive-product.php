@@ -25,15 +25,7 @@
 
 <section class="mt-0 mb-12">
     <div class="container grid grid-cols-4 relative ">
-        <div class="hidden md:block col-span-1 h-full pr-[12.5px]">
-            <div class="sticky top-[150px] input-block">
-                <?php   if ( is_active_sidebar( 'filter-sidebar' ) ) { ?>
-           
-                        <?php dynamic_sidebar( 'filter-sidebar' ); ?>
-                  
-                <?php } ?>
-          
-        </div>
+      
         
         <div class="card-container col-span-4 md:col-span-3 grid grid-cols-1 gap-3 relative h-auto">
             <div class="col-span-1">
@@ -56,6 +48,10 @@
                                     ?>
                         <?php endif; ?>
                     <?php endwhile; ?>
+                    <?php elseif; ?>
+                     <h1 class="text-22 leading-28 md:text-28 md:leading-32 font-titel">Welkom</h1>
+                    <p class="text-16 leading-22 text-grijs pt-2 max-w-[800px]">Welkom op de tijdlijke shoppagina van Nutridog</p>
+                    <hr class="hadow-block max-w-[800px] mt-4 mb-1">
                 <?php endif; ?>
 
             </div>
