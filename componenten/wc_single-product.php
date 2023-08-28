@@ -57,7 +57,7 @@ if ( post_password_required() ) {
                             </div>
                         </div>
                     </div>
-                    <div class="md:col-span-1 md:pt-3">
+                    <div class="md:col-span-1 md:pt-3 pl-5">
                         <div class="text-ellipsis overflow-hidden">
                             <?php
                         do_action( 'woocommerce_single_product_summary' );
