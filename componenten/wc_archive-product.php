@@ -12,7 +12,7 @@
 
 <section class="mt-0 mb-12">
     <div class="container grid grid-cols-4 relative ">
-   <div class="hidden md:block col-span-1 h-full pr-[12.5px]">
+   <div class="hidden md:block col-span-1 h-full pr-3">
         <div class="sticky top-[150px] input-block">
                 <?php   if ( is_active_sidebar( 'filter-sidebar' ) ) { ?>
            
