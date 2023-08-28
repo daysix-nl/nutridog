@@ -31,13 +31,13 @@ if ( post_password_required() ) {
                         <div style="--swiper-navigation-color: #fff; --swiper-pagination-color: #fff" class="swiper mySwiper2 shadow-block h-[50vw] md:h-auto">
                             <div class="swiper-wrapper">
                                 <div class="swiper-slide overflow-hidden aspect-square flex justify-center items-center py-3 cursor-grabbing bg-one">
-                                    <img class="h-full max-h-[330px]" src="<?php echo wp_get_attachment_url( $product->get_image_id() ); ?>" />
+                                    <img class="h-full max-h-[330px] py-3" src="<?php echo wp_get_attachment_url( $product->get_image_id() ); ?>" />
                                 </div>                                  
                             <?php $attachment_ids = $product->get_gallery_image_ids();
                                 foreach( $attachment_ids as $attachment_id ) 
                                 { ?>
                                 <div class="swiper-slide overflow-hidden aspect-square flex justify-center items-center py-3 cursor-grabbing bg-one">
-                                    <img class="h-full max-h-[330px]" src="<?php echo wp_get_attachment_url( $product->get_image_id() ); ?>" />
+                                    <img class="h-full max-h-[330px] py-3" src="<?php echo wp_get_attachment_url( $product->get_image_id() ); ?>" />
                                 </div>    
                             <?php } ?>
                             </div>
