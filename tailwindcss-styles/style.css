@@ -1380,6 +1380,10 @@ video {
     padding-top: 112px;
   }
 
+  .md\:pl-5 {
+    padding-left: 50px;
+  }
+
   .md\:text-100 {
     font-size: 100px;
   }

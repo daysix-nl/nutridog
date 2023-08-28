@@ -11,7 +11,7 @@ if ( post_password_required() ) {
 
 <section class="pt-2">
     <div class="container grid md:grid-cols-2">
-        <p class="flex flex-row items-center text-green text-12"><a href="">Home</a>  <span class="w-[4px] h-[4px] rounded-full bg-green block mx-1"></span> <a href="/producten">Producten</a> <span class="w-[4px] h-[4px] rounded-full bg-green block mx-1"></span> <a href=""><?php the_title(); ?></a></p>
+        <p class="flex flex-row items-center text-green text-12"><a href="/">Home</a>  <span class="w-[4px] h-[4px] rounded-full bg-green block mx-1"></span> <a href=""><?php the_title(); ?></a></p>
         <p class="flex flex-row items-center text-green text-[14.56px] justify-end"><a href="javascript:history.go(-1)" class="back-button">Stap terug</a> </p>
     </div>
 </section>
@@ -57,7 +57,7 @@ if ( post_password_required() ) {
                             </div>
                         </div>
                     </div>
-                    <div class="md:col-span-1 md:pt-3 pl-5">
+                    <div class="md:col-span-1 md:pt-3 md:pl-5">
                         <div class="text-ellipsis overflow-hidden">
                             <?php
                         do_action( 'woocommerce_single_product_summary' );
