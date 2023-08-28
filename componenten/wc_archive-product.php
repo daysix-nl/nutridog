@@ -104,7 +104,7 @@
                                 if ( 'simple' === get_post_type() ) {  ?>
                                 <?php $sku = $product->get_sku(); ?>
                                 <div class="grid grid-cols-1 lg:grid-cols-2">
-                                    <a class="hidden lg:block col-span-1 bg-one px-2 py-[8px] hover:opacity-80 duration-300" href="<?php echo $current_url ?>&add-to-cart=<?php echo $sku">
+                                    <a class="hidden lg:block col-span-1 bg-one px-2 py-[8px] hover:opacity-80 duration-300" href="<?php echo $current_url ?>&add-to-cart=<?php echo $sku ?>">
                                          <p class="text-13 leading-13 text-center">In winkelwagen</p>
                                     </a>
                                     <a class="col-span-1 bg-roze px-2 py-[7px] hover:opacity-80 duration-300" href="<?php the_permalink(); ?>">
