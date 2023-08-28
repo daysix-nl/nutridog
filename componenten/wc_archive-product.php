@@ -3,17 +3,7 @@
     <section class="container mt-2">
         <div class="grid grid-cols-2">
         <p class="flex flex-row items-center text-black text-12 mb-4"><a href="/">Home</a> <span class="w-[4px] h-[4px] rounded-full bg-white block mx-1"></span> <a href="/producten">Producten</a></p>
-        <div class="justify-end hidden md:flex">
-            <?php
-            /**
-             * Hook: woocommerce_archive_description.
-             *
-             * @hooked woocommerce_taxonomy_archive_description - 10
-             * @hooked woocommerce_product_archive_description - 10
-             */
-            do_action( 'woocommerce_archive_description' );
-            ?>
-        </div>
+        
         </div>
         
 
@@ -25,7 +15,15 @@
 
 <section class="mt-0 mb-12">
     <div class="container grid grid-cols-4 relative ">
-      
+        <!-- <div class="hidden md:block col-span-1 h-full pr-[12.5px]">
+            <div class="sticky top-[150px] input-block">
+                <?php   if ( is_active_sidebar( 'filter-sidebar' ) ) { ?>
+           
+                        <?php dynamic_sidebar( 'filter-sidebar' ); ?>
+                  
+                <?php } ?>
+          
+        </div> -->
         
         <div class="card-container col-span-4 md:col-span-3 grid grid-cols-1 gap-3 relative h-auto">
             <div class="col-span-1">
@@ -48,7 +46,10 @@
                                     ?>
                         <?php endif; ?>
                     <?php endwhile; ?>
-               
+                        <?php elseif; ?>
+                     <h1 class="text-22 leading-28 md:text-28 md:leading-32 font-titel">Welkom</h1>
+                    <p class="text-16 leading-22 text-grijs pt-2 max-w-[800px]">xxx</p>
+                    <hr class="hadow-block max-w-[800px] mt-4 mb-1">
                 <?php endif; ?>
 
             </div>
