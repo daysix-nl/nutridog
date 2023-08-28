@@ -46,10 +46,7 @@
                                     ?>
                         <?php endif; ?>
                     <?php endwhile; ?>
-                        <?php elseif; ?>
-                     <h1 class="text-22 leading-28 md:text-28 md:leading-32 font-titel">Welkom</h1>
-                    <p class="text-16 leading-22 text-grijs pt-2 max-w-[800px]">xxx</p>
-                    <hr class="hadow-block max-w-[800px] mt-4 mb-1">
+                        
                 <?php endif; ?>
 
             </div>
