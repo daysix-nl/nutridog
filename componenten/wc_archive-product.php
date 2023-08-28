@@ -76,7 +76,7 @@
 
                         <div class="col-span-1 h-full relative pb-[95px] bg-one shadow-block md:hover:scale-105 duration-300">
                             <div class="relative bg-one ">
-                                <div class="h-[225px]">
+                                <div class="h-[285px]">
                                 <a class="bg-half aspect-square flex justify-center items-center p-3" href="<?php the_permalink(); ?>">
                                     <img class="h-auto w-auto max-w-[225px] max-h-[225px]" src="<?php echo get_the_post_thumbnail_url($loop->post->ID); ?>" alt="">
                                 </a>
