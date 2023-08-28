@@ -59,7 +59,7 @@
                     ?>
                 </div> 
             <div class="col-span-1 grid grid-cols-2 md:grid-cols-3 gap-2 md:gap-3"> 
-                                        
+                <?php $current_url = (isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] === 'on' ? "https" : "http") . "://" . $_SERVER['HTTP_HOST'] . $_SERVER['REQUEST_URI']; ?>         
                 <?php
                     $args = array(
                         'post_type' => 'product',
@@ -81,7 +81,7 @@
                                 </a>
                                 <div class="bg-one px-[15px] md:px-3 pb-3 text-ellipsis overflow-hidden">
                                     <a class="text-16 leading-20 font-titel" href="<?php the_permalink(); ?>"><?php echo $loop->post->post_title; ?></a>
-                                    <p class="text-14 leading-20 pt-2 text-grijs"><?php echo $loop->post->post_excerpt; ?></p>
+                                  
                                 </div>
                                <?php 
                                 if ( $product->is_on_sale() ) {
@@ -101,9 +101,10 @@
                                 </div>
                                 <?php
                                 // Controleer of het product een simple product is
-                                if ( 'simple' === get_post_type() ) { ?>
+                                if ( 'simple' === get_post_type() ) {  ?>
+                                <?php $sku = $product->get_sku(); ?>
                                 <div class="grid grid-cols-1 lg:grid-cols-2">
-                                    <a class="hidden lg:block col-span-1 bg-one px-2 py-[8px] hover:opacity-80 duration-300" href="#">
+                                    <a class="hidden lg:block col-span-1 bg-one px-2 py-[8px] hover:opacity-80 duration-300" href="<?php echo $current_url ?>&add-to-cart=<?php echo $sku">
                                          <p class="text-13 leading-13 text-center">In winkelwagen</p>
                                     </a>
                                     <a class="col-span-1 bg-roze px-2 py-[7px] hover:opacity-80 duration-300" href="<?php the_permalink(); ?>">
@@ -116,7 +117,8 @@
                                 elseif ( 'product' === get_post_type() && function_exists( 'wc_get_product' ) ) {
                                     $product = wc_get_product( get_the_ID() );
                                     // Controleer of het variable product variaties heeft
-                                    if ( $product->is_type( 'variable' ) && $product->has_child() ) { ?>
+                                    if ( $product->is_type( 'variable' ) && $product->has_child() ) { 
+                                     ?>
                                     <div class="grid grid-cols-1">
                                         <a class="col-span-1 bg-roze px-2 py-[8px] hover:opacity-80 duration-300" href="<?php the_permalink(); ?>">
                                             <p class="text-13 leading-13 text-center text-white">Bekijk product</p>
