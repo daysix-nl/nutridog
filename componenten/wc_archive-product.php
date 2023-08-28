@@ -2,11 +2,8 @@
 <section class="relative overflow-hidden">
     <section class="container mt-2">
         <div class="grid grid-cols-2">
-        <p class="flex flex-row items-center text-black text-12 mb-4"><a href="/">Home</a> <span class="w-[4px] h-[4px] rounded-full bg-white block mx-1"></span> <a href="/producten">Producten</a></p>
-        
+        <p class="flex flex-row items-center text-black text-12 mb-4"><a href="/">Home</a></p>
         </div>
-        
-
     </section>
 </section>
 
@@ -15,15 +12,15 @@
 
 <section class="mt-0 mb-12">
     <div class="container grid grid-cols-4 relative ">
-        <!-- <div class="hidden md:block col-span-1 h-full pr-[12.5px]">
-            <div class="sticky top-[150px] input-block">
+   <div class="hidden md:block col-span-1 h-full pr-[12.5px]">
+        <div class="sticky top-[150px] input-block">
                 <?php   if ( is_active_sidebar( 'filter-sidebar' ) ) { ?>
            
                         <?php dynamic_sidebar( 'filter-sidebar' ); ?>
                   
                 <?php } ?>
           
-        </div> -->
+        </div> 
         
         <div class="card-container col-span-4 md:col-span-3 grid grid-cols-1 gap-3 relative h-auto">
             <div class="col-span-1">
